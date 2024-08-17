@@ -65,6 +65,9 @@ img {
 img:hover {
   transform: scale(1.05);
   cursor: pointer;
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 
 h5 {
@@ -149,6 +152,9 @@ footer .closing {
   margin-bottom: 50px;
   padding: 20px;
   border-bottom: 2px solid rgb(0, 162, 255);
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 .text-box p {
   text-align: justify;
@@ -196,11 +202,17 @@ footer .closing {
   padding: 30px;
   text-align: justify;
   border-bottom: 2px solid rgb(0, 162, 255);
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 .quote-text {
   background: #123d63;
   border: 1px solid #ff00f2d3;
   padding: 20px;
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 .end {
   color: #bdaeae;
@@ -252,5 +264,16 @@ footer .closing {
     max-width: 100%;
     display: block;
     margin: 10px auto;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }
